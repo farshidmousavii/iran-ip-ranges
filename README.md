@@ -51,6 +51,27 @@
 | `checksums.txt` | [Download](https://raw.githubusercontent.com/farshidmousavii/iran-ip-ranges/main/dist/checksums.txt) |
 | `iran-ip-ranges.zip` | [دانلود از Releases](https://github.com/farshidmousavii/iran-ip-ranges/releases/latest) |
 
+### دانلود باینری (بدون نیاز به Go)
+
+باینری‌های آماده برای سیستم‌عامل‌های مختلف در هر Release منتشر می‌شوند:
+
+| سیستم‌عامل | دانلود |
+|-----------|--------|
+| Linux | [`iran-ip-linux-amd64`](https://github.com/farshidmousavii/iran-ip-ranges/releases/latest/download/iran-ip-linux-amd64) |
+| macOS (Apple Silicon) | [`iran-ip-darwin-arm64`](https://github.com/farshidmousavii/iran-ip-ranges/releases/latest/download/iran-ip-darwin-arm64) |
+| Windows | [`iran-ip-windows-amd64.exe`](https://github.com/farshidmousavii/iran-ip-ranges/releases/latest/download/iran-ip-windows-amd64.exe) |
+
+```bash
+# لینوکس / مک
+chmod +x iran-ip-linux-amd64
+./iran-ip-linux-amd64
+
+# ویندوز ( PowerShell )
+.\iran-ip-windows-amd64.exe
+```
+
+> نیازی به نصب Go یا Docker نیست. فقط باینری را دانلود و اجرا کنید.
+
 ---
 
 ## Quick Start
@@ -109,15 +130,29 @@ curl -O https://raw.githubusercontent.com/farshidmousavii/iran-ip-ranges/main/di
 
 به وسیله GitHub Actions هر ۶ ساعت فایل‌ها به‌روزرسانی می‌شوند.
 
-**دو روش دانلود:**
+**سه روش دانلود:**
 - **فایل‌های تکی** — هر فایل به‌صورت جداگانه از پوشه `dist/` در دسترس است
 - **بسته کامل (zip)** — همه فایل‌ها به‌صورت یکجا در [GitHub Releases](https://github.com/farshidmousavii/iran-ip-ranges/releases/latest) هر روز منتشر می‌شوند
+- **باینری آماده** — فایل اجرایی مخصوص سیستم‌عامل خود را از Releases دانلود کنید (بدون نیاز به Go)
 
-### ۲. روش Self-hosted Web Server
+### ۲. اجرای وب سرور (Self-hosted)
 
-پروژه را روی سرور خود اجرا کنید.
+وب سرور را روی سرور خود اجرا کنید. دو روش:
 
-ویژگی‌ها:
+**روش الف — دانلود باینری (ساده‌تر):**
+
+```bash
+# لینوکس amd64
+wget https://github.com/farshidmousavii/iran-ip-ranges/releases/latest/download/iran-ip-linux-amd64
+chmod +x iran-ip-linux-amd64
+./iran-ip-linux-amd64
+```
+
+**روش ب — داکر:**
+
+از داکر هم می‌توانید استفاده کنید (دستورات در بخش Docker پایین).
+
+ویژگی‌های وب سرور:
 
 - دریافت خودکار Prefixها در startup
 - ارائه فایل‌ها از طریق HTTP
@@ -125,11 +160,21 @@ curl -O https://raw.githubusercontent.com/farshidmousavii/iran-ip-ranges/main/di
 - استفاده از cache روی دیسک هنگام قطعی اینترنت
 - استفاده از Health Check داخلی
 - دارای Graceful Shutdown
-- اجرای non-root در Docker
 
 ---
 
 ## نصب
+
+### گزینه ۱ — باینری (ساده‌ترین روش)
+
+```bash
+# لینوکس amd64
+wget https://github.com/farshidmousavii/iran-ip-ranges/releases/latest/download/iran-ip-linux-amd64
+chmod +x iran-ip-linux-amd64
+./iran-ip-linux-amd64
+```
+
+### گزینه ۲ — با Go
 
 ```bash
 git clone https://github.com/farshidmousavii/iran-ip-ranges.git
@@ -312,6 +357,27 @@ All output files are available under the `dist/` directory.
 > A complete archive of all files is published daily as **GitHub Releases**.
 > [Download latest release](https://github.com/farshidmousavii/iran-ip-ranges/releases/latest).
 
+### Pre-built Binaries (no Go required)
+
+Ready-to-run binaries for every platform are published in each release:
+
+| Platform | Download |
+|----------|----------|
+| Linux | [`iran-ip-linux-amd64`](https://github.com/farshidmousavii/iran-ip-ranges/releases/latest/download/iran-ip-linux-amd64) |
+| macOS (Apple Silicon) | [`iran-ip-darwin-arm64`](https://github.com/farshidmousavii/iran-ip-ranges/releases/latest/download/iran-ip-darwin-arm64) |
+| Windows | [`iran-ip-windows-amd64.exe`](https://github.com/farshidmousavii/iran-ip-ranges/releases/latest/download/iran-ip-windows-amd64.exe) |
+
+```bash
+# Linux / macOS
+chmod +x iran-ip-linux-amd64
+./iran-ip-linux-amd64
+
+# Windows (PowerShell)
+.\iran-ip-windows-amd64.exe
+```
+
+> No Go or Docker installation required. Just download and run.
+
 ### Clash / Mihomo
 
 - `clash/iran.yaml`
@@ -406,13 +472,27 @@ Ready-to-use example configs are available in the `examples/` directory:
 
 GitHub Actions automatically refreshes the files every 6 hours.
 
-**Two download options:**
+**Three download options:**
 - **Individual files** — each file available directly from the `dist/` folder
 - **Full archive (zip)** — all files bundled in daily [GitHub Releases](https://github.com/farshidmousavii/iran-ip-ranges/releases/latest)
+- **Pre-built binary** — download the executable for your platform from Releases (no Go required)
 
 ### 2. Self-hosted Web Server
 
-Run the project on your own server.
+Run the web server on your own machine. Two methods:
+
+**Option A — Download binary (simpler):**
+
+```bash
+# Linux amd64
+wget https://github.com/farshidmousavii/iran-ip-ranges/releases/latest/download/iran-ip-linux-amd64
+chmod +x iran-ip-linux-amd64
+./iran-ip-linux-amd64
+```
+
+**Option B — Docker:**
+
+You can also use Docker (see Docker section below).
 
 Features:
 
@@ -422,11 +502,21 @@ Features:
 - Disk cache fallback
 - Built-in health checks
 - Graceful shutdown
-- Non-root Docker runtime
 
 ---
 
 ## Installation
+
+### Option 1 — Binary (easiest)
+
+```bash
+# Linux amd64
+wget https://github.com/farshidmousavii/iran-ip-ranges/releases/latest/download/iran-ip-linux-amd64
+chmod +x iran-ip-linux-amd64
+./iran-ip-linux-amd64
+```
+
+### Option 2 — With Go
 
 ```bash
 git clone https://github.com/farshidmousavii/iran-ip-ranges.git
