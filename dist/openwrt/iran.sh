@@ -1,4 +1,4 @@
-# last fetch: 2026-05-27 13:34:44 +0330
+# last fetch: 2026-05-27 19:27:57 +0330
 #!/bin/sh
 # Iran IP lists for OpenWRT
 # Copy this file to your router and run: sh /etc/iran-ip.sh
