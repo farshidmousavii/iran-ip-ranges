@@ -16,6 +16,10 @@ func FetchAndWrite(dir string) error {
 		return err
 	}
 
+	// Merge supplemental ASNs and prefixes that RIPE's country-resource-list misses.
+	asn = append(asn, ipfetcher.SupplementalASNs...)
+	ipList = append(ipList, ipfetcher.SupplementalPrefixes...)
+
 	prefixes := ipfetcher.GetPrefixes(asn, 50)
 	subnets := ipfetcher.Merge(prefixes, append(ipList, ipv6List...))
 
