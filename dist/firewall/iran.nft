@@ -1,4 +1,4 @@
-# last fetch: 2026-06-14 08:14:13 +0330
+# last fetch: 2026-06-14 13:15:03 +0330
 # Iran IP subnets for nftables
 # include this file:  include "/etc/nftables/iran.nft"
 # or copy the sets into your existing table
