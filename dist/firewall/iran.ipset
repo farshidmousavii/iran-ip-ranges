@@ -1,4 +1,4 @@
-# last fetch: 2026-06-23 23:42:35 +0330
+# last fetch: 2026-06-24 07:33:05 +0330
 # Iran IPv4 subnets
 create iran-v4 hash:net family inet hashsize 1024 maxelem 65536
 flush iran-v4
@@ -704,7 +704,6 @@ add iran-v4 94.183.153.0/24
 add iran-v4 94.183.154.0/24
 add iran-v4 94.183.156.0/23
 add iran-v4 94.183.160.0/21
-add iran-v4 94.183.169.0/24
 add iran-v4 94.183.171.0/24
 add iran-v4 94.183.173.0/24
 add iran-v4 94.183.175.0/24
