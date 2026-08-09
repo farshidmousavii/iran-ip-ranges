@@ -1,4 +1,4 @@
-# last fetch: 2026-08-09 10:33:30 +0330
+# last fetch: 2026-08-09 16:30:39 +0330
 /ip firewall address-list remove [/ip firewall address-list find list=IRAN]
 /ip firewall address-list
 add list=IRAN address=2.57.3.0/24
