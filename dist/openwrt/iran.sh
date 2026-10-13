@@ -1,4 +1,4 @@
-# last fetch: 2026-10-12 18:27:50 +0330
+# last fetch: 2026-10-13 03:55:23 +0330
 #!/bin/sh
 # Iran IP lists for OpenWRT
 # Copy this file to your router and run: sh /etc/iran-ip.sh
@@ -732,6 +732,7 @@ ipset add iran-v4 94.183.180.0/23
 ipset add iran-v4 94.183.207.0/24
 ipset add iran-v4 94.183.210.0/23
 ipset add iran-v4 94.183.215.0/24
+ipset add iran-v4 94.183.223.0/24
 ipset add iran-v4 94.183.225.0/24
 ipset add iran-v4 94.183.227.0/24
 ipset add iran-v4 94.183.231.0/24
