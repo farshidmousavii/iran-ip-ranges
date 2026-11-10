@@ -1,4 +1,4 @@
-# last fetch: 2026-11-10 18:07:57 +0330
+# last fetch: 2026-11-11 02:32:05 +0330
 /ip firewall address-list remove [/ip firewall address-list find list=IRANv6]
 /ip firewall address-list
 add list=IRANv6 address=2001:678:b0::/46
